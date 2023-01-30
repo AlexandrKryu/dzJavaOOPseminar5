@@ -3,7 +3,6 @@ package org.example.view;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.TreeMap;
 
 public class View {
 	private final Scanner scanner;
@@ -12,8 +11,7 @@ public class View {
 		this.scanner = new Scanner(System.in);
 	}
 
-	public void showMainMenu() {
-		Map<Integer, String> menuViewModel = new TreeMap<>(Map.of(1, "Пункт 1", 2, "Пункт 2", 3, "Все"));
+	public void showMenu(Map<Integer, String> menuViewModel) {
 		System.out.println();
 		System.out.println("Меню: \n");
 		for (var integerStringEntry : menuViewModel.entrySet()) {
